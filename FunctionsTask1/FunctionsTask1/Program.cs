@@ -7,7 +7,7 @@ using System;
 
 namespace FunctionsTask1
 {
-    class Program
+    internal static class Program
     {
         private static int[,] MatrixInput(int row, int col)
         {
@@ -17,11 +17,8 @@ namespace FunctionsTask1
             {
                 listOfRows[i] = Console.ReadLine();
                 if (listOfRows[i].Split().Length != col)
-                    throw new IndexOutOfRangeException();
-                for (var j = 0; j < col; j++)
-                {
-                    matrix[i, j] = int.Parse(listOfRows[i].Split()[j]);
-                }
+                    throw new IndexOutOfRangeException("Invalid amount of matrix row elements");
+                for (var j = 0; j < col; j++) matrix[i, j] = int.Parse(listOfRows[i].Split()[j]);
             }
 
             return matrix;
@@ -31,11 +28,7 @@ namespace FunctionsTask1
         {
             for (var i = 0; i < row; i++)
             {
-                for (var j = 0; j < col; j++)
-                {
-                    Console.Write(matrix[i, j] + " ");
-                }
-
+                for (var j = 0; j < col; j++) Console.Write(matrix[i, j] + " ");
                 Console.WriteLine();
             }
         }
@@ -47,10 +40,8 @@ namespace FunctionsTask1
             {
                 var amountOfZerosInARow = 0;
                 for (var j = 0; j < col; j++)
-                {
                     if (matrix[i, j] == 0)
                         amountOfZerosInARow++;
-                }
 
                 if (amountOfZerosInARow == col)
                     zeroRowsAmount++;
@@ -66,10 +57,8 @@ namespace FunctionsTask1
             {
                 var amountOfZerosInAColumn = 0;
                 for (var j = 0; j < row; j++)
-                {
                     if (matrix[j, i] == 0)
                         amountOfZerosInAColumn += 1;
-                }
 
                 if (amountOfZerosInAColumn == row)
                     zeroColumnsAmount += 1;
@@ -83,7 +72,7 @@ namespace FunctionsTask1
             return numbers.Max();
         }
 
-        static void Main()
+        private static void Main()
         {
             Console.Write("Matrix A size (row*col): ");
             var matrixASize = Console.ReadLine().Split("*");
@@ -107,7 +96,9 @@ namespace FunctionsTask1
             var zeroC = Max(ZeroValueRow(matrixC, rowC, colC), ZeroValueColumn(matrixC, rowC, colC));
 
             if (zeroA == 0 && zeroB == 0 && zeroC == 0)
+            {
                 Console.WriteLine("\nMatrices with zero rows or columns are missing.");
+            }
             else
             {
                 Console.Write("\nMatrix/matrices with the largest number of zero rows or columns:");

@@ -1,0 +1,10 @@
+9
+F,Maltesers,chocolate,3/10/25,UK
+B,Pepsi,soft drink,0,250
+F,Milka,chocolate,8.3/33/51,Switzerland
+B,Coca-Cola,soft drink,0,0.33
+B,Arizona,tea,0,500
+F,Heinz,ketchup,0/0/5,US
+B,Moet&Chandon,champagne,12,750
+F,Trident,gum,0/0/2,US
+B,Hennessy,cognac,40,375
