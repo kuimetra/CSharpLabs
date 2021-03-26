@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿// Створити інтерфейс INorm з методом для обчислення норми. Створити класи (комплексні числа, вектор, квадратна матриця), 
+// які реалізовуватимуть цей інтерфейс. Створити масив об’єктів цих класів, знайти об’єкт з найбільшою нормою і об’єкт 
+// з найменшою нормою.
+
+using System.Collections.Generic;
 using System.Linq;
 using System;
 
@@ -95,12 +99,12 @@ namespace InterfacesTask5
 
         public float GetNorm()
         {
-            List<float> rowSum = new List<float>();
+            var rowSum = new List<float>();
 
-            for (int i = 0; i < _size; ++i)
+            for (var i = 0; i < _size; ++i)
             {
                 float sum = 0;
-                for (int j = 0; j < _size; ++j)
+                for (var j = 0; j < _size; ++j)
                 {
                     sum += Math.Abs(Mat[i, j]);
                 }
