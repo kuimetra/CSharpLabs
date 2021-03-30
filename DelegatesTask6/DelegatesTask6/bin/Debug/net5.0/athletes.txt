@@ -1,0 +1,5 @@
+Stone 1,0,5,3,2
+Goldberg 7,8,5,9,0
+Brenner 9,8,5,2,1
+Webb 3,2,8,9,1
+Nasley 8,1,0,2,3
