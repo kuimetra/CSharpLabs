@@ -1,0 +1,7 @@
+T,Kevin Johnston,professor
+T,Maya Trejo,docent
+S,Anessa Tucker,4.2
+S,Tyler Joseph,5
+T,Stephanie Lee,assistant
+S,Brian Banksy,4.55
+S,John Goldberg,3.9
